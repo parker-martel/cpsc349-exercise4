@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Task Blaster - Home</title>
+      <link rel="stylesheet" type="text/css" href="/output.css">
+  </head>
+  <body>
+     <!-- Nav bar -->
+     <nav class="flex justify-between items-center p-1 px-5 pt-3 pb-3 bg-white">
+      <!-- Logo -->
+      <div class="flex flex-start items-center space-x-3">
+      <a href="/index"><img src="/assets/images/Task Blaster Logo transparent.png" class="h-6"alt="Task Blaster Logo" /></a>
+
+      <a href="/index" class="font-extrabold text-transparent text-3xl bg-clip-text bg-gradient-to-b from-blue-400 to-indigo-600 group transition duration-300">Task Blaster
+      <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-blue-400"></span>
+      </a>
+      
+      </div>
+      
+      <div class="flex space-x-10 items-center">
+        <!-- Home and about us text -->
+        <!-- #if currentUser -->
+        <a href="/{{currentUser.details.username}}" class="text-xl font-semibold group text-black transition duration-300">Home
+        <!-- else -->
+        <a href="/index.html" class="text-xl font-semibold group text-black transition duration-300">Home
+        <!-- /if -->
+        <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-blue-400"></span>
+        </a>
+
+        <a href="/aboutus.html" class="text-xl font-semibold group text-black transition duration-300">About Us
+        <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-blue-400"></span>
+        </a>
+        <!-- #if currentUser -->
+        <!-- Logout Button -->
+        <a href="/logout.html" class="bg-black text-white py-1 px-4 shadow-xl rounded">
+          Logout
+        </a>
+        <!-- else -->
+        <!-- Get Started Button -->
+        <a href="signup.html" class="bg-blue-400 text-white py-1 px-3 shadow-lg rounded">
+          Get Started
+        </a>
+        <!-- /if -->
+      </div>  
+    </nav>
+    
+ 
+  <!-- #if currentUser -->
+  <!--  <a href="/user/logout">Logout</a> -->
+  <!-- else -->
+  <!--  <a class="nav__button" href="/user/signup">Sign up</a> -->
+  <!--  &nbsp; -->
+  <!--  <a class="nav__button" href="/user/login">Log in</a> -->
+  <!-- /if -->
+
+
+
+    <!-- Text Section -->
+    <main class="flex flex-col justify-center items-center space-y-16 pb-20 md:flex-row md:space-y-0 md:py-20 md:items-start relative space-x-20 mt-16 text-left bg-gradient-to-r from-blue-100 to-cyan-100 rounded-lg shadow-lg">
+      <!-- White triangle on left side -->
+      <div class="absolute -left-56 -bottom-32 p-40 bg-transparent">
+        <div class="w-0 h-0 xl:border-t-[320px] xl:border-t-transparent xl:border-l-[180px] xl:border-l-white xl:border-b-[320px] xl:border-b-transparent"></div>
+      </div>
+      <!-- Left side -->
+      <div class="flex flex-col items-start space-y-5 text-left">
+        <h1 class="text-4xl">Let's help you <span class="text-blue-400 font-bold">organize.</span></h1>
+        <p class="text-lg font-semibold pt-6">Modern tracking. Simply efficient.</p>
+        <ul class="list-disc pl-4 space-y-6 max-w-sm">
+          <li>Task Blaster allows you to easily keep track of all your daily tasks in one simple place.</li>
+          <li>Be your very best. Use Task Blaster and never go another day feeling unaccomplished again.</li>
+        </ul>
+        <p class="text-lg font-semibold">Easy to use.</p>
+        <ul class="list-disc pl-4 space-y-6 max-w-sm">
+          <li>Add and remove all your daily tasks in one place. And then click one button to add and remove items.</li>
+        </ul>
+        <!-- Login & Signup Buttons -->
+        {{#if currentUser}}
+        <div>
+          <a href="/{{currentUser.details.username}}" class="bg-black text-white text-sm justify-center py-2 px-6 shadow-xl rounded">
+            Go to your dashboard
+          </a>
+        </div>
+        {{else}}
+        <div class="space-x-12">
+          <!-- Get Started Button -->
+          <a href="/signup.html" class="bg-blue-400 text-white py-2 px-3 hover:bg-blue-300 transition-color duration-200 rounded-lg">
+            Get Started
+          </a>
+          <a href="/login.html" class="bg-loginBlue text-white text-md py-2 px-6 hover:bg-blue-500 transition-color duration-200 rounded-lg">
+            Login
+          </a>
+        </div>
+        {{/if}}
+      </div>
+      <!-- Right side  -->
+      <div class="flex flex-col items-center space-y-5 text-left">
+        <span>
+        <h1 class="text-4xl">Not productive? We can fix that.</h1>
+        </span>
+        <!-- Sample image -->
+        <img src="/assets/images/Sampleimage.png" class="h-96 shadow-lg rounded-b-md rounded-t-xl pt-2" alt="Task Blaster Logo" />
+      </div>
+    </main>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js%22%3E></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js%22%3E></script>
+    <script
+        type="application/javascript"
+        defer
+        crossorigin
+        src="https://unpkg.com/pocketbase@0.8.3/dist/pocketbase.umd.js"
+        ></script>
+    <script type ='module' src="app.js"></script>
+  </body>
+</html> 

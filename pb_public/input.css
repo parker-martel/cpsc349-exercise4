@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .todo-box{
+      @apply px-6 py-1 border border-black bg-white rounded-xl;
+    }
+  }
+
+@layer components {
+    .add-todo-button{
+      @apply mt-6 px-3 py-1 mb-5 bg-blue-300 rounded;
+    }
+  }
+
+@layer components {
+    .section-number{
+      @apply text-3xl font-light;
+    }
+  }
+
+@layer components {
+    .section-divider{
+      @apply h-1 border-t-2 border-black mb-5;
+    }
+  }
+
+@layer components {
+    .section-container{
+      @apply px-6 py-6 mb-3 w-2/3 max-w-xl rounded-xl bg-gradient-to-r from-blue-100 to-cyan-100;
+    }
+  }
+
+@layer components {
+    .aboutus-container{
+      @apply flex justify-start px-14 shadow-xl space-x-40 text-left items-center bg-zinc-100;
+    }
+  }
+
+
+  

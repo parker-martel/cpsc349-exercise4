@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Task Blaster - Main</title>    
+    </head>
+    <body class="bg-gray-100">
+        <div class="h-2 bg-blue-200 rounded-t-full shadow-xl"></div>
+        <header class="flex items-center mt-8 ml-7">
+            {{!-- Display user's name at top left --}}
+            <h1 class="text-4xl">Welcome, <span class="text-blue-400 font-bold">{{currentUser.details.username}}</span></h1>
+        </header>
+        {{!-- Todo List --}}
+        <main class="flex flex-col mt-8 justify-center items-center md:flex-row md:items-start md:space-x-6 md:mt-11 md:px-4">
+            {{!-- Section 1 --}}
+            <section class="section-container" object>
+                <h2 class="section-number">Section 1</h2>
+                <div class="section-divider"></div>
+                <div class="space-y-2 "array key="todos1" sortable>
+                {{#for todo in todos1}}
+                <p class="todo-box"
+                object 
+                key:text="@innerText"
+                edit:text
+                >{{default todo.text "New todo item"}}
+                {{/for}}
+                </div>
+
+                <button class="add-todo-button" new:todo>Add Todo</button>
+            </section>
+            
+            {{!-- Section 2 --}}
+            <section class="section-container" object>
+                <h2 class="section-number">Section 2</h2>
+                <div class="section-divider"></div>
+                <div class="space-y-2 "array key="todos2" sortable>
+                {{#for todo in todos2}}
+                <p class="todo-box"
+                object 
+                key:text="@innerText"
+                edit:text
+                >{{default todo.text "New todo item"}}
+                {{/for}}
+                </div>
+
+                <button class="add-todo-button" new:todo>Add Todo</button>
+            </section>
+
+            {{!-- Section 3 --}}
+            <section class="section-container" object>
+                <h2 class="section-number">Section 3</h2>
+                <div class="section-divider"></div>
+                <div class="space-y-2 "array key="todos3" sortable>
+                {{#for todo in todos3}}
+                <p class="todo-box"
+                object 
+                key:text="@innerText"
+                edit:text
+                >{{default todo.text "New todo item"}}
+                {{/for}}
+                </div>
+
+                <button class="add-todo-button" new:todo>Add Todo</button>
+            </section>
+        </main> 
+    </body>
+</html>

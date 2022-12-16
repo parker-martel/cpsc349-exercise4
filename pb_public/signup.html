@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Task Blaster - Sign Up</title>
+        <link rel="stylesheet" type="text/css" href="/output.css">
+    </head>
+    <body>
+       <!-- Nav bar -->
+    <nav class="flex justify-between items-center p-1 px-5 pt-3 pb-3 bg-white">
+      <!-- Logo -->
+      <div class="flex flex-start items-center space-x-3">
+      <a href="/index"><img src="/assets/images/Task Blaster Logo transparent.png" class="h-6"alt="Task Blaster Logo" /></a>
+
+      <a href="/index" class="font-extrabold text-transparent text-3xl bg-clip-text bg-gradient-to-b from-blue-400 to-indigo-600 group transition duration-300">Task Blaster
+      <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-blue-400"></span>
+      </a>
+      
+      </div>
+      
+      <div class="flex space-x-10 items-center">
+        <!-- Home and about us text -->
+        <!-- #if currentUser -->
+        <a href="/{{currentUser.details.username}}" class="text-xl font-semibold group text-black transition duration-300">Home
+        <!-- else -->
+        <a href="/index.html" class="text-xl font-semibold group text-black transition duration-300">Home
+        <!-- /if -->
+        <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-blue-400"></span>
+        </a>
+
+        <a href="/aboutus.html" class="text-xl font-semibold group text-black transition duration-300">About Us
+        <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-blue-400"></span>
+        </a>
+        <!-- #if currentUser -->
+        <!-- Logout Button -->
+        <a href="/logout.html" class="bg-black text-white py-1 px-4 shadow-xl rounded">
+          Logout
+        </a>
+        <!-- else -->
+        <!-- Get Started Button -->
+        <a href="signup.html" class="bg-blue-400 text-white py-1 px-3 shadow-lg rounded">
+          Get Started
+        </a>
+        <!-- /if -->
+      </div>  
+    </nav>
+    
+ 
+  <!-- #if currentUser -->
+  <!--  <a href="/user/logout">Logout</a> -->
+  <!-- else -->
+  <!--  <a class="nav__button" href="/user/signup">Sign up</a> -->
+  <!--  &nbsp; -->
+  <!--  <a class="nav__button" href="/user/login">Log in</a> -->
+  <!-- /if -->
+
+
+
+  
+      <!-- Text Section -->
+      <main class="flex items-center justify-center h-screen bg-gray-100">
+          <form action="/user/signup" method="post">
+              <div class=" bg-white w-96 p-6 rounded shadow-sm">   
+                  <h1 class="text-4xl"><span class="text-blue-400 font-bold">Signup </span>For a Task Blaster Account</h1>        
+                  <div class="flex items-center justify-center mb-4">
+                      <img src="/assets/images/tasks.jpg" class="pt-8 hhh-32" alt="Task Logo 2"/>
+                  </div>        
+                  <label class="tex-gray-700">Username:</label>
+                  <input 
+                      class="w-full py-2 bg-gray-50 text-gray-500 px-1 outline-none mb-4 rounded-md focus:ring-2 focus:ring-signupBlue focus:rounded-md"
+                      type="text" name="username" placeholder="username" required
+                  />
+                  <label class="tex-gray-700">Email:</label>
+                  <input 
+                      class="w-full py-2 bg-gray-50 text-gray-500 px-1 outline-none mb-4 rounded-md focus:ring-2 focus:ring-signupBlue focus:rounded-md"
+                      type="email" name="email" placeholder="email" required
+                  />
+                  <label class="tex-gray-700">Password:</label>
+                  <input 
+                      class="w-full py-2 bg-gray-50 text-gray-500 px-1 outline-none mb-4 rounded-md focus:ring-2 focus:ring-signupBlue focus:rounded-md"
+                      type="password" name="password" placeholder="password" required
+                  />                                  
+                  <button 
+                      type="submit"
+                      class="bg-blue-500 w-full text-gray-100 py-w rounded hover:bg-blue-600 transition-colors">Sign up
+                  </button>
+                  <p class="mt-4">
+                      Already have an account?
+                      <a href="/login.html" class="text-blue-500 hover:text-blue-700">Login</a>
+                  </p>
+              </div>  
+          </form>
+      </main>
+  </body>
+</html>

@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Task Blaster - About Us</title>
+        <link rel="stylesheet" type="text/css" href="/output.css">
+    </head>
+    <body>
+        <!-- Nav bar -->
+    <nav class="flex justify-between items-center p-1 px-5 pt-3 pb-3 bg-white">
+        <!-- Logo -->
+        <div class="flex flex-start items-center space-x-3">
+        <a href="/index"><img src="/assets/images/Task Blaster Logo transparent.png" class="h-6"alt="Task Blaster Logo" /></a>
+  
+        <a href="/index" class="font-extrabold text-transparent text-3xl bg-clip-text bg-gradient-to-b from-blue-400 to-indigo-600 group transition duration-300">Task Blaster
+        <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-blue-400"></span>
+        </a>
+        
+        </div>
+        
+        <div class="flex space-x-10 items-center">
+          <!-- Home and about us text -->
+          <!-- #if currentUser -->
+          <a href="/{{currentUser.details.username}}" class="text-xl font-semibold group text-black transition duration-300">Home
+          <!-- else -->
+          <a href="/index" class="text-xl font-semibold group text-black transition duration-300">Home
+          <!-- /if -->
+          <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-blue-400"></span>
+          </a>
+  
+          <a href="/aboutus" class="text-xl font-semibold group text-black transition duration-300">About Us
+          <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-blue-400"></span>
+          </a>
+          <!-- #if currentUser -->
+          <!-- Logout Button -->
+          <a href="/user/logout" class="bg-black text-white py-1 px-4 shadow-xl rounded">
+            Logout
+          </a>
+          <!-- else -->
+          <!-- Get Started Button -->
+          <a href="/user/signup" class="bg-blue-400 text-white py-1 px-3 shadow-lg rounded">
+            Get Started
+          </a>
+          <!-- /if -->
+        </div>  
+      </nav>
+      
+   
+    <!-- #if currentUser -->
+    <!--  <a href="/user/logout">Logout</a> -->
+    <!-- else -->
+    <!--  <a class="nav__button" href="/user/signup">Sign up</a> -->
+    <!--  &nbsp; -->
+    <!--  <a class="nav__button" href="/user/login">Log in</a> -->
+    <!-- /if -->
+
+
+
+
+    
+        <!-- Text Section -->
+        <main class="flex flex-col justify-center items-center pt-10 pb-20 px-20 -mt-18 text-center bg-gradient-to-r from-blue-100 to-cyan-100 rounded-lg shadow-lg">
+            <section class="max-w-3xl">
+                <h1 class="text-4xl mb-6">
+                    About <span class="text-blue-400 font-bold">Us.</span>
+                </h1>
+                <p class="text-lg pt-6 mb-6">
+                    On a fateful October day of the year 2022, four strangers were grouped together for the second project
+                    of Professor Avery’s Web-Front Engineering course. They bonded over the horror that is Cascading Style 
+                    Sheets when writing HTML. Nothing like tears and frustration that really brings a group of people together. 
+                    They were able to overcome all adversities and create Task Blaster, a task list web application that aims to keep users on track.
+                </p>
+                
+            </section>
+            <h1 class="flex justify-start text-2xl font-bold pt-6 mb-3">Meet the Team!</h1> 
+            <section class="aboutus-container rounded-t-xl pt-6">
+                <div class="flex space-x-6 pl-4 py-6 pr-44 w-1/2 border-2  border-black rounded-xl">
+                    <img src="/assets/images/aboutus-profile-pic.png" class="h-24 border border-black rounded" alt="Profile pic">
+                    <div class="w-44">
+                        <p class="font-bold">Julian Apparicio</p>
+                        <ul>
+                            <li class="pt-6">
+                                <a href="https://github.com/awesomejuju" class="text-blue-500 underline hover:text-blue-700">github link</a>
+                            </li>
+                        </ul>    
+                    </div>  
+                </div>
+                <div class="flex space-x-6 pl-4 py-6 pr-44 w-1/2  border-2 border-black rounded-xl">
+                    <img src="/assets/images/aboutus-profile-pic.png" class="h-24 border border-black rounded" alt="Profile pic">
+                    <div class="w-44">
+                        <p class="font-bold">Cayden Sarvis</p>
+                        <ul>
+                            <li class="pt-6">
+                                <a href="https://github.com/caydsarvis/cpsc-349project2-parker.git" class="text-blue-500 underline hover:text-blue-700">github link</a>
+                            </li>  
+                        </ul>  
+                    </div>   
+                </div>
+            </section>
+            <section class="aboutus-container rounded-b-xl py-12">
+                <div class="flex space-x-6 pl-4 py-6 pr-44 border-2 w-1/2  border-black rounded-xl">
+                    <img src="/assets/images/aboutus-profile-pic.png" class="h-24 border border-black rounded" alt="Profile pic">
+                    <div class="w-44">
+                        <p class="font-bold">Erica Bravo</p>
+                        
+                        <ul>
+                            <li class="pt-6">
+                                <a href="https://github.com/ericabCSUF" class="text-blue-500 underline hover:text-blue-700">github link</a>
+                            </li>
+                        </ul>   
+                    </div>  
+                </div>
+                <div class="flex space-x-6 pl-4 py-6 pr-44 w-1/2  border-2 border-black rounded-xl">
+                    <img src="/assets/images/aboutus-profile-pic.png" class="h-24 border border-black rounded" alt="Profile pic">
+                    <div class="w-44">
+                        <p class="font-bold">Parker Martel</p>
+                        <ul>
+                            <li class="pt-6">
+                                <a href="https://github.com/parker-martel" class="text-blue-500 underline hover:text-blue-700">github link</a>
+                            </li> 
+                        </ul>   
+                    </div>   
+                </div>
+            </section>
+        </main>
+    </body>
+</html>
