@@ -538,6 +538,18 @@ video {
   padding-bottom: 0.25rem;
 }
 
+.delete-todo-button {
+  margin-top: 1.5rem;
+  margin-bottom: 1.25rem;
+  border-radius: 0.25rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(252 165 165 / var(--tw-bg-opacity));
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
 .section-number {
   font-size: 1.875rem;
   line-height: 2.25rem;
