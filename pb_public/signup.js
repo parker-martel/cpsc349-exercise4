@@ -4,7 +4,6 @@ let username = document.querySelector("#username");
 let email = document.querySelector("#email");
 let password = document.querySelector("#password");
 
-
 signupButton.addEventListener("click", async event => { 
 
     // example create data
@@ -14,15 +13,14 @@ signupButton.addEventListener("click", async event => {
         "emailVisibility": true,
         "password": password.value,
         "passwordConfirm": password.value
-    };
+};
 
     const record = await pb.collection('users').create(data);
 
+    console.log(`Signup up as ${username.value}`);
+
   });
 
-  console.log(username.value);
-  console.log(user);
-  console.log(client.authStore.token); // output the token
-  console.log(client.authStore.model); // output the authenticated User or Admin model
+
 
 

@@ -6,6 +6,17 @@ const addTodoButton = document.querySelector("#new-todo-button");
 const deleteTodoButton = document.querySelector("#delete-todo-button");
 const sectionNumber = document.querySelector("#section-number");
 
+// after the above you can also access the auth data from the authStore
+console.log(pb.authStore.isValid);
+console.log(pb.authStore.token);
+console.log(pb.authStore.model.id);
+
+// you can also fetch all records at once via getFullList
+const records = await pb.collection('users').getFullList(200 /* batch size */, {
+  sort: '-created',
+});
+
+
 
 addTodoButton.addEventListener('click', async event => {
   const taskItem = await pb.collection('todo_list').create({
