@@ -1,7 +1,6 @@
 const pb = new PocketBase("http://127.0.0.1:8090/");
 let nav = document.querySelector("#rightNav");
 
-
     console.log(pb.authStore.isValid);
 if (pb.authStore.isValid){
     let input = document.createElement('a');

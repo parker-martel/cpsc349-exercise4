@@ -1,8 +1,10 @@
 const pb = new PocketBase("http://127.0.0.1:8090/");
 let loginButton = document.querySelector("#login-button");
 let username = document.querySelector("#username");
+let usernameText = document.querySelector("#usernameText");
 let password = document.querySelector("#password");
 let nav = document.querySelector("#rightNav");
+
 
 loginButton.addEventListener("click", async event => { 
 
@@ -10,15 +12,17 @@ loginButton.addEventListener("click", async event => {
         username.value,
         password.value,
     );
+    localStorage.setItem("usernameStore", username.value);
     
     // after the above you can also access the auth data from the authStore
     console.log(pb.authStore.isValid);
-    console.log(pb.authStore.token);
-    console.log(pb.authStore.model.id);
-    console.log(`Logged in as ${username.value}`);
+    
+    if (authData){
+        console.log(`Logged in as ${username.value}`);
+    }
 
 
-  });
+});
 
     console.log(pb.authStore.isValid);
 if (pb.authStore.isValid){
@@ -49,6 +53,7 @@ if (pb.authStore.isValid){
     input.innerHTML = "Get Started"
     rightNav.insertAdjacentElement("beforeend", input);
 }
+
 
 
 

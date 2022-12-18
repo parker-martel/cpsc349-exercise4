@@ -17,7 +17,9 @@ signupButton.addEventListener("click", async event => {
 
     const record = await pb.collection('users').create(data);
 
-    console.log(`Signup up as ${username.value}`);
+    if (authData){
+        console.log(`Signed up as ${username.value}`);
+    }
 
   });
 

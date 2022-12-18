@@ -63,13 +63,13 @@
           <li>Add and remove all your daily tasks in one place. And then click one button to add and remove items.</li>
         </ul>
         <!-- Login & Signup Buttons -->
-        {{#if currentUser}}
+      
         <div>
-          <a href="/{{currentUser.details.username}}" class="bg-black text-white text-sm justify-center py-2 px-6 shadow-xl rounded">
+          <a href="/app-index.html" class="bg-black text-white text-sm justify-center py-2 px-6 shadow-xl rounded">
             Go to your dashboard
           </a>
         </div>
-        {{else}}
+      
         <div class="space-x-12">
           <!-- Get Started Button -->
           <a href="/signup.html" class="bg-blue-400 text-white py-2 px-3 hover:bg-blue-300 transition-color duration-200 rounded-lg">
@@ -79,7 +79,7 @@
             Login
           </a>
         </div>
-        {{/if}}
+ 
       </div>
       <!-- Right side  -->
       <div class="flex flex-col items-center space-y-5 text-left">
